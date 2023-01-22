@@ -11,8 +11,7 @@ def home():
 @app.route('/predict' , methods = ['POST'])
 def predict():
 
-    response = ""
-    review = request.json.get('customer_review')
+  
     if not review:
         response = {'status' : 'error',
                     'message' : 'Empty Review'}
